@@ -8,6 +8,8 @@ public class CustomerService
 
     public void Create(Customer customer)
     {   
+        customer.Id = Guid.NewGuid().ToString();
+
         customer.CustomerName = customer.CustomerName.Trim();
         _customerList.Add(customer);
     }

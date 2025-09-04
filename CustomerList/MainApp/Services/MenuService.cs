@@ -71,7 +71,7 @@ public class MenuService
 
         foreach (var customer in customerList)
         {
-            Console.WriteLine(customer.CustomerName);
+            Console.WriteLine($"{customer.Id} - {customer.CustomerName}");
         }
 
         Console.WriteLine();
