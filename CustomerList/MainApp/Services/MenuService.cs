@@ -9,6 +9,7 @@ public class MenuService
 
     public void DisplayMainMenu()
     {
+        _customerService = new CustomerService();
         while (true)
         {
             Console.Clear();
