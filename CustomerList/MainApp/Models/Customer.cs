@@ -2,9 +2,9 @@
 
 public class Customer
 {
-    // CustomerName
-    // ContactPerson -> CustomerContactPerson
-    // ContactInformation -> CustomerContactInformation
-    // BillingAddress -> Address
-    // DeliveryAddress -> Address
+    public string CustomerName { get; set; } = null!;
+    public ContactInformation ContactInformation { get; set; } = null!;
+    public ContactPerson? ContactPerson { get; set; }
+    public Address BillingAddress { get; set; } = null!;
+    public Address DeliveryAddress { get; set; } = null!;
 }
