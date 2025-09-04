@@ -41,6 +41,8 @@ public class MenuService
 
         var customer = new Customer();
 
+
+        // Customer Name
         while (string.IsNullOrEmpty(customer.CustomerName))
         {
             Console.Write("Enter Customer Name: ");
@@ -53,6 +55,37 @@ public class MenuService
                 Console.Clear();
             }
         }
+
+        // Customer Contact Person
+        customer.ContactPerson = new ContactPerson();
+
+        while (string.IsNullOrEmpty(customer.ContactPerson.FirstName))
+        {
+            Console.Write("Enter First Name: ");
+            customer.ContactPerson.FirstName = Console.ReadLine()!;
+
+            if (string.IsNullOrEmpty(customer.ContactPerson.FirstName))
+            {
+                Console.WriteLine("You must enter a valid first name.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+
+
+        while (string.IsNullOrEmpty(customer.ContactPerson.LastName))
+        {
+            Console.Write("Enter Last Name: ");
+            customer.ContactPerson.LastName = Console.ReadLine()!;
+
+            if (string.IsNullOrEmpty(customer.ContactPerson.LastName))
+            {
+                Console.WriteLine("You must enter a valid last name.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+
 
         _customerService.Create(customer);
 
